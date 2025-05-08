@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": "a004",
+      "nombre": "Tarjeta de debito",
+      "description": "remitida por parte del banco ubicacacion av 12 de octubre y jose tamayo hola",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxR7kSSPfbOlxDjFG3EQB47a9tVYiylMhhgA&s",
+      "fechaLib": "2025-05-09",
+      "fechaRev": "2026-05-09"
+    },
+    {
+      "id": "a006",
+      "nombre": "Visa Platinum",
+      "description": "remitida por parte del banco ubicacacion av 12 de octubre y jose tamayo",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxR7kSSPfbOlxDjFG3EQB47a9tVYiylMhhgA&s",
+      "fechaLib": "2025-05-09",
+      "fechaRev": "2026-05-09"
+    },
+    {
+      "id": "a001",
+      "nombre": "Visa Platinum",
+      "description": "Visa Banco Pichicnha",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxR7kSSPfbOlxDjFG3EQB47a9tVYiylMhhgA&s",
+      "fechaLib": "2025-05-09",
+      "fechaRev": "2026-05-09"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+<div class="principal">
+  <div class="form">
+    <!-- Botón de retroceso -->
+    <!-- Con ícono SVG de flecha -->
+    <div style="text-align: left;">
+      <button class="btn-volver" (click)="volver()">
+        <span style="font-size: 20px;">⬅</span>
+      </button>
+    </div>
+    <h1>Formulario de Registro</h1>
+    <form (ngSubmit)="enviarFormulario()">
+      <div class="form-grid">
+        <!-- ID -->
+        <div>
+          <label for="id">ID</label>
+          <input
+            type="text"
+            id="id"
+            name="id"
+            required
+            minlength="3"
+            maxlength="10"
+            [(ngModel)]="product.id"
+            [ngModelOptions]="{ standalone: true }"
+            placeholder="Ingrese ID (3-10 caracteres)..."
+          />
+          <div *ngIf="showErrors && (!product.id || product.id.length < 3 || product.id.length > 10)" style="color:red;">
+            ID debe tener entre 3 y 10 caracteres.
+          </div>
+          <div *ngIf="showErrors && idDuplicado" style="color:red;">
+            ID no válido: ya existe un producto con ese ID.
+          </div>
+        </div>
+
+        <!-- Nombre -->
+        <div>
+          <label for="nombre">Nombre</label>
+          <input
+            type="text"
+            id="nombre"
+            name="nombre"
+            required
+            minlength="5"
+            maxlength="100"
+            [(ngModel)]="product.nombre"
+            [ngModelOptions]="{ standalone: true }"
+            placeholder="Ingrese nombre producto..."
+          />
+          <div *ngIf="showErrors && (product.nombre.length < 5 || product.nombre.length > 100)" style="color:red;">
+            Nombre debe tener entre 5 y 100 caracteres.
+          </div>
+        </div>
+
+        <!-- Descripción -->
+        <div>
+          <label for="description">Descripción</label>
+          <input
+            type="text"
+            id="description"
+            name="description"
+            required
+            minlength="10"
+            maxlength="200"
+            [(ngModel)]="product.description"
+            [ngModelOptions]="{ standalone: true }"
+            placeholder="Descripción..."
+          />
+          <div *ngIf="showErrors && (product.description.length < 10 || product.description.length > 200)" style="color:red;">
+            Descripción debe tener entre 10 y 200 caracteres.
+          </div>
+        </div>
+
+        <!-- Logo -->
+        <div>
+          <label for="logo">Logo (URL)</label>
+          <input
+            type="text"
+            id="logo"
+            name="logo"
+            required
+            [(ngModel)]="product.logo"
+            [ngModelOptions]="{ standalone: true }"
+            placeholder="URL del logo..."
+          />
+          <div *ngIf="showErrors && !product.logo" style="color:red;">
+            Campo requerido
+          </div>
+        </div>
+
+        <!-- Fecha de Liberación -->
+        <div>
+          <label for="fechaLib">Fecha Liberación</label>
+          <input
+            type="date"
+            id="fechaLib"
+            name="fechaLib"
+            required
+            [(ngModel)]="product.fechaLib"
+            [ngModelOptions]="{ standalone: true }"
+          />
+          <div *ngIf="showErrors && !fechaLiberacionValida" style="color:red;">
+            La fecha de liberación no puede ser anterior a hoy.
+          </div>
+        </div>
+
+        <!-- Fecha de Revisión -->
+        <div>
+          <label for="fechaRev">Fecha Revisión</label>
+          <input
+            type="date"
+            id="fechaRev"
+            name="fechaRev"
+            required
+            [(ngModel)]="product.fechaRev"
+            [ngModelOptions]="{ standalone: true }"
+          />
+          <div *ngIf="showErrors && !fechaRevisionValida" style="color:red;">
+            La fecha de revisión debe ser exactamente 1 año después de la liberación.
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="form-a">
+        <button type="reset" class="reset-btn">Reiniciar</button>
+        <button type="submit" class="enviar-btn">Enviar</button>
+      </div>
+    </form>
+  </div>
+</div>

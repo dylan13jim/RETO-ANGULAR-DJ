@@ -1,0 +1,273 @@
+/* CONTENEDOR GENERAL */
+.outer-container {
+  background-color: #cee5fc49;
+  padding: 40px;
+  border-radius: 1px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  max-width: 1500px;
+  margin: 40px auto;
+  box-sizing: border-box;
+}
+
+/* NUEVA BARRA SUPERIOR: Búsqueda + botón Agregar */
+.barra-superior {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto 10px auto;
+  box-sizing: border-box;
+}
+
+/* INPUT DE BÚSQUEDA */
+.search-bar {
+  margin: 0;
+  width: auto;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 250px;
+}
+
+/* CONTENEDOR DE TABLA */
+.table-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 2px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0);
+  overflow-x: auto;
+  max-width: 92%;
+  font-weight: 400;
+  margin: 15px auto;
+}
+
+/* TABLA */
+table {
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-shadow: 0 4px 12px rgba(247, 247, 247, 0.61);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 15px;
+  border-collapse: collapse;
+}
+
+/* ENCABEZADOS */
+th {
+  background-color: #ffffff8f;
+  color: rgb(0, 0, 0);
+  padding: 15px;
+  font-weight: 500;
+  text-align: center;
+  border-bottom: 1px solid #d8d8d8;
+  font-size: 15px;    
+  vertical-align: top; 
+}
+
+/* CELDAS */
+td {
+  padding: 12px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 15px;
+  word-break: break-word;
+ 
+  vertical-align: top;
+}
+
+/* HOVER FILA */
+tr:hover td {
+  background-color: #f9f9f9;
+}
+
+th:nth-child(1), td:nth-child(1){
+  width: 100px;
+}
+
+th:nth-child(2), td:nth-child(2){
+  width: 200px;
+}
+
+th:nth-child(3), td:nth-child(3){
+  width: 150px;
+}
+
+/* BOTONES EDITAR Y ELIMINAR */
+.btn1,
+.btn2 {
+  margin-right: 10px;
+  margin-top: 5px;
+  padding: 10px;
+  max-width: 200px;
+  width: 100px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.btn1 {  
+  background: linear-gradient(135deg,  #10009cb4, #010027);    
+  color: rgb(255, 255, 255);  
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn1:hover {
+  background: #05003038;
+  color: #09003d93;
+}
+
+.btn2 {  
+  background: linear-gradient(135deg,  #e6ff03, #91ff00, #ffee00);   
+  color: rgb(0, 1, 70);  
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn2:hover {
+  background: #e5ff0059;
+  color: #09003d93;
+}
+
+/* SELECTOR DE PÁGINA */
+.page-size {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  font-family: inherit;
+}
+
+.page-size select {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* BOTÓN AGREGAR */
+.btn-agregar {
+  background: linear-gradient(135deg,  #e6ff03, #91ff00, #ffee00);   
+  color: rgb(25, 0, 54);
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.btn-agregar:hover {
+  background: #e5ff0059;
+  color: #09003d93;
+}
+
+/* OPCIONES */
+.opciones-container {
+  position: relative;
+  display: inline-block;
+}
+
+.btn-opciones {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.btn-opciones:hover {
+  background-color: #e0e0e0;
+}
+
+
+
+/* MODAL */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.modal {
+  background: rgba(255, 255, 255, 0.925);
+  padding: 24px;
+  border-radius: 8px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-buttons {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-cancelar,
+.btn-confirmar {
+  padding: 17px 56px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.btn-cancelar {  
+  background: linear-gradient(135deg,  #0500305d, #ffffff, #0500305d);
+  color: #09003d;
+}
+
+.btn-cancelar:hover {
+  background: #05003038;
+  color: #09003d93;
+}
+
+.btn-confirmar {
+  background: linear-gradient(135deg,  #e5ff0098, #91ff00b7, #eaff009f);  
+  color: rgb(0, 1, 48);
+}
+
+.btn-confirmar:hover {
+  background: #e5ff0059;
+  color: #09003d93;
+}
+
+.logo{
+  border-radius: 50%;
+  object-fit: cover;
+  height: 32px;
+  width: 32px;
+}
+
+.total-registros{
+  margin-bottom: 10px;
+  font-weight: 500;
+  text-align: left;
+}
