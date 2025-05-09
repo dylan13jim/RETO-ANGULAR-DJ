@@ -1,10 +1,10 @@
-![image](https://github.com/user-attachments/assets/c0347f0f-4a11-4e63-8ed2-94905f0a268e)**PROYECTO ANGULAR**
+#PROYECTO ANGULAR
 ![image](https://github.com/user-attachments/assets/c1d11d24-0ce6-4663-96b0-5575e5df5287)
 
-*BACK -JSON-SERVER*
+#BACK -JSON-SERVER
 
 Instalacion json-server
-`npm i -g json-server`
+```npm i -g json-server```
 Ingreso a directorio o carpeta api en back
 `cd api`
 Comando para ejecutar back
