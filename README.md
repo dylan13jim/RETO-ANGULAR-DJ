@@ -1,24 +1,35 @@
-#PROYECTO ANGULAR
+---
+## PROYECTO ANGULAR
 ![image](https://github.com/user-attachments/assets/c1d11d24-0ce6-4663-96b0-5575e5df5287)
-
-#BACK -JSON-SERVER
+---
+# BACK -JSON-SERVER
 
 Instalacion json-server
-```npm i -g json-server```
+``` bash
+npm i -g json-server
+```
 Ingreso a directorio o carpeta api en back
-`cd api`
+``` bash
+cd api
+```
 Comando para ejecutar back
 Puerto en el que est trabajando = 3000
-`json-server --watch db.json --port 3000`
-
-*FRONT - ANGULAR*
+``` bash
+json-server --watch db.json --port 3000
+```
+---
+##FRONT - ANGULAR
 
 Instalación de dependencias del proyecto
-`npm install`
+``` bash
+npm install
+```
 Comando para ejecutar front
-`npm start`
-
-**PRUEBAS DE ENDPOINTS**
+``` bash
+npm start
+```
+---
+##PRUEBAS DE ENDPOINTS
 *GET*
 ![image](https://github.com/user-attachments/assets/c6d7ee45-2a36-471c-8fab-a5ee628dd890)
 
@@ -31,7 +42,8 @@ Comando para ejecutar front
 *DELETE*
 ![image](https://github.com/user-attachments/assets/3c7acbc6-41c1-4c90-bb3e-476c39c5cb7d)
 
-**PRUEBAS DE INTERFAZ UI**
+---
+##PRUEBAS DE INTERFAZ UI
 ![image](https://github.com/user-attachments/assets/36bac1ef-dc98-42ff-8798-f20d68533a73)
 
 ![image](https://github.com/user-attachments/assets/2f220d7a-bc9e-4aa6-88df-5f1805db8990)
