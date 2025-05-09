@@ -1,5 +1,5 @@
 ---
-## PROYECTO ANGULAR
+# PROYECTO ANGULAR
 ![image](https://github.com/user-attachments/assets/c1d11d24-0ce6-4663-96b0-5575e5df5287)
 ---
 # BACK -JSON-SERVER
@@ -18,7 +18,7 @@ Puerto en el que est trabajando = 3000
 json-server --watch db.json --port 3000
 ```
 ---
-##FRONT ANGULAR
+#FRONT ANGULAR
 ---
 Instalación de dependencias del proyecto
 ``` bash
@@ -29,7 +29,7 @@ Comando para ejecutar front
 npm start
 ```
 ---
-#PRUEBAS DE ENDPOINTS
+PRUEBAS DE ENDPOINTS
 ---
 *GET*
 ![image](https://github.com/user-attachments/assets/c6d7ee45-2a36-471c-8fab-a5ee628dd890)
@@ -44,7 +44,7 @@ npm start
 ![image](https://github.com/user-attachments/assets/3c7acbc6-41c1-4c90-bb3e-476c39c5cb7d)
 
 ---
-#PRUEBAS DE INTERFAZ UI
+PRUEBAS DE INTERFAZ UI
 ---
 ![image](https://github.com/user-attachments/assets/36bac1ef-dc98-42ff-8798-f20d68533a73)
 
