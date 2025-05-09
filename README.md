@@ -1,59 +1,43 @@
-# Tcs1
+![image](https://github.com/user-attachments/assets/c0347f0f-4a11-4e63-8ed2-94905f0a268e)**PROYECTO ANGULAR**
+![image](https://github.com/user-attachments/assets/c1d11d24-0ce6-4663-96b0-5575e5df5287)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.9.
+*BACK -JSON-SERVER*
 
-## Development server
+Instalacion json-server
+`npm i -g json-server`
+Ingreso a directorio o carpeta api en back
+`cd api`
+Comando para ejecutar back
+Puerto en el que est trabajando = 3000
+`json-server --watch db.json --port 3000`
 
-To start a local development server, run:
+*FRONT - ANGULAR*
 
-```bash
-ng serve
-```
+Instalación de dependencias del proyecto
+`npm install`
+Comando para ejecutar front
+`npm start`
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+**PRUEBAS DE ENDPOINTS**
+*GET*
+![image](https://github.com/user-attachments/assets/c6d7ee45-2a36-471c-8fab-a5ee628dd890)
 
-## Code scaffolding
+*POST*
+![image](https://github.com/user-attachments/assets/47289529-9ce0-4584-9937-803e7d0fc34c)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+*PUT*
+![image](https://github.com/user-attachments/assets/635e5259-c213-492d-b5a0-1f467ea33194)
 
-```bash
-ng generate component component-name
-```
+*DELETE*
+![image](https://github.com/user-attachments/assets/3c7acbc6-41c1-4c90-bb3e-476c39c5cb7d)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+**PRUEBAS DE INTERFAZ UI**
+![image](https://github.com/user-attachments/assets/36bac1ef-dc98-42ff-8798-f20d68533a73)
 
-```bash
-ng generate --help
-```
+![image](https://github.com/user-attachments/assets/2f220d7a-bc9e-4aa6-88df-5f1805db8990)
 
-## Building
+![image](https://github.com/user-attachments/assets/15e1cddc-49f9-4631-8363-2e56657f6e39)
 
-To build the project run:
+![image](https://github.com/user-attachments/assets/c2425252-898c-4768-a022-59caa165abfd)
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
