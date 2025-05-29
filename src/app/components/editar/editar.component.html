@@ -1,11 +1,8 @@
-
 <div class="principal">
-    <div class="form">
-        <!-- Botón de retroceso -->
-        <!-- Con ícono SVG de flecha -->
+    <div class="form">        
         <div style="text-align: left;">
             <button class="btn-volver" (click)="volver()">
-                <span style="font-size: 20px;">⬅</span>
+                <span style="font-size: 18px; color: rgb(0, 0, 83);">⮜ Atrás</span>
             </button>
         </div>
         <h2>Editar Producto</h2>
@@ -36,24 +33,31 @@
                         id="nombre"
                         required minlength="5" 
                         maxlength="100" 
+                        [(ngModel)]="product.nombre"
+                        [ngModelOptions]="{ standalone: true }"
                     />
                     <div *ngIf="showErrors && (product.nombre.length < 5 || product.nombre.length > 100)" style="color:red;">
                         Nombre debe tener entre 5 y 100 caracteres.
+                    </div>
+                    <div *ngIf="showErrors && !validarNombre(product.nombre)" style="color:red;">
+                        Solo letras permitidas.
                     </div>
                 </div>  
 
                 <div>
                     <label for="description">Descripción:</label>
-                    <textarea 
+                    <input
                         [(ngModel)]="product.description" 
                         type="text"
                         name="description" 
                         id="description"
                         required minlength="10" 
-                        maxlength="200">
-                    </textarea>
+                        maxlength="200">                    
                     <div *ngIf="showErrors && (product.description.length < 10 || product.description.length > 200)" style="color:red;">
                         Descripción debe tener entre 10 y 200 caracteres.
+                    </div>
+                    <div *ngIf="showErrors && !validarDescripcion(product.description)" style="color:red;">
+                        Solo letras y números permitidos.
                     </div>
                 </div>
 
@@ -63,13 +67,14 @@
                         [(ngModel)]="product.logo" 
                         type="text"
                         id="logo"
-                        name="logo"
-                        id="logo"            
-                        name="logo" 
+                        name="logo"         
                         required 
                     />
                     <div *ngIf="showErrors && !product.logo" style="color:red;">
                         El campo Logo no puede estar vacío.
+                    </div>
+                    <div *ngIf="showErrors && !logoValido" style="color:red;">
+                        Ingrese una URL válida fomrato obligatorio (jpg, png, jpeg, svg)
                     </div>
                 </div>
 
@@ -79,9 +84,10 @@
                         type="date"
                         id="fechaLib"
                         name="fechaLib"
-                        [(ngModel)]="product.fechaLib" 
-                        name="fechaLib"                         
+                        [(ngModel)]="product.fechaLib"                    
                         required 
+                        (input)="onFechaLiberacionChange($event)"
+                        (change)="onFechaLiberacionChange($event)"
                     />
                     <div *ngIf="showErrors && !fechaLiberacionValida" style="color:red;">
                         La fecha de liberación debe ser igual o posterior a hoy.
@@ -89,20 +95,24 @@
                 </div>
 
                 <div>
-                    <label for="fechaRev">Fecha de Revisión:</label>
+                    <label for="fechaRev">Fecha de Revisión (Automática):</label>
                     <input 
-                        [(ngModel)]="product.fechaRev" 
-                        name="fechaRev" 
-                        type="date" 
-                        required />
-                    <div *ngIf="showErrors && !fechaRevisionValida" style="color:red;">
-                        La fecha de revisión debe ser exactamente un año después de la fecha de liberación.
+                        type="date"
+                        id="fechaRev"
+                        name="fechaRev"
+                        readonly
+                        [value]="fechaRevisionFormateada"
+                        style="background-color: #f5f5f5; cursor: not-allowed;"
+                        required 
+                    />
+                    <div style="color: #666; font-size: 12px; margin-top: 4px;">
+                        
                     </div>
                 </div>                
             </div>     
             <div class="formEdit-a">
-                <button type="submit"  class="reset-btn">Guardar Cambios</button>
-                <button type="button" (click)="volver()"  class="enviar-btn">Cancelar</button>
+                <button type="button" (click)="volver()" class="reset-btn">Cancelar</button>
+                <button type="submit" class="enviar-btn">Guardar Cambios</button>
             </div>        
         </form>        
     </div>

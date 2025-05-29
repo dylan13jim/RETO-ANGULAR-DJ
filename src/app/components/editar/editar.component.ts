@@ -25,6 +25,7 @@ export class EditarComponent implements OnInit {
   showErrors = false;
   fechaLiberacionValida = true;
   fechaRevisionValida = true;
+  logoValido = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -47,36 +48,96 @@ export class EditarComponent implements OnInit {
     }
   }
 
-  enviarFormulario() {
+  
+  onFechaLiberacionChange(event: any) {
+    const fechaString = event.target.value;
+    
+    if (fechaString && fechaString.length === 10) { 
+      const fechaLib = new Date(fechaString);
+      
+      
+      if (!isNaN(fechaLib.getTime())) {
+        
+        const fechaRev = new Date(fechaLib);
+        fechaRev.setFullYear(fechaLib.getFullYear() + 1);
+        
+        
+        this.product.fechaRev = fechaRev;
+        
+        
+        this.fechaRevisionValida = true;
+      }
+    }
+  }
+
+  
+  get fechaRevisionFormateada(): string {
+    if (!this.product.fechaRev) return '';
+    
+    const d = new Date(this.product.fechaRev);
+    if (isNaN(d.getTime())) return '';
+    
+    const year = d.getFullYear();
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    
+    return `${year}-${month}-${day}`;
+  }
+
+  validarNombre(nombre: string): boolean {
+    const regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+    return regex.test(nombre);
+  }
+
+  validarFormatoURL(url: string): boolean {
+    const regex = /\.(jpeg|jpg|png|svg|webp)$/i;
+    try {
+      const parsedUrl = new URL(url);
+      return regex.test(parsedUrl.pathname);
+    } catch (_) {
+      return false;
+    }
+  }
+
+  validarImagenURL(url: string): Promise<boolean> {
+    return new Promise(resolve => {
+      const img = new Image();
+      img.onload = () => resolve(true);
+      img.onerror = () => resolve(false);
+      img.src = url;
+    });
+  }
+
+  validarDescripcion(description: string): boolean{
+    const regex = /^[A-Za-z0-9\s]+$/;
+    return regex.test(description);
+  }
+
+  async enviarFormulario() {
     this.showErrors = true;
 
     const idValido = this.product.id.length >= 3 && this.product.id.length <= 10;
-    const nombreValido = this.product.nombre.length >= 5 && this.product.nombre.length <= 100;
+    const nombreValido = this.product.nombre.length >= 5 && this.product.nombre.length <= 100 && this.validarNombre(this.product.nombre);
     const descripcionValida = this.product.description.length >= 10 && this.product.description.length <= 200;
+    const urlFormatoValido = this.validarFormatoURL(this.product.logo);
 
     const hoy = new Date();
     const fechaLib = new Date(this.product.fechaLib);
-    const fechaRev = new Date(this.product.fechaRev);
 
-    this.fechaLiberacionValida = fechaLib >= new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate());
-
-    this.fechaRevisionValida =
-      fechaRev.getFullYear() === fechaLib.getFullYear() + 1 &&
-      fechaRev.getMonth() === fechaLib.getMonth() &&
-      fechaRev.getDate() === fechaLib.getDate();
+    this.fechaLiberacionValida = fechaLib >= new Date(hoy.getFullYear(), hoy.getMonth(), hoy.getDate());    
+    this.fechaRevisionValida = true;
+    this.logoValido = urlFormatoValido && await this.validarImagenURL(this.product.logo);
 
     if (
       !idValido ||
       !nombreValido ||
       !descripcionValida ||
-      !this.product.logo ||
-      !this.fechaLiberacionValida ||
-      !this.fechaRevisionValida
+      !this.logoValido  ||
+      !this.fechaLiberacionValida
     ) {
       return;
     }
-
-    // Actualizar producto
+   
     this.apiService.update(this.product).subscribe(() => {
       this.router.navigate(['/']);
     });

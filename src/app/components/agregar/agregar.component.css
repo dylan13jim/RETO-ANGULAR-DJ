@@ -1,9 +1,9 @@
 .principal {
-    background-color: #cee5fc49;
+    background-color: #e9e9e942;
     padding: 10px;
     border-radius: 4px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
-    max-width: 1000px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+    max-width: 850px;
     margin: 0px auto;
     box-sizing: border-box;
     width: 100%;
@@ -24,25 +24,21 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* Título */
 h1 {
-    color: #000000;
+    color: #0f0031;
     font-size: 25px;
     margin-bottom: 40px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
 }
 
-/* Grid de campos en 2 columnas */
 .form-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* ← SOLO 2 COLUMNAS */
+    grid-template-columns: 1fr 1fr; 
     gap: 20px;
     text-align: left;
     font-size: 15px;
 }
 
-/* Estilos para inputs */
 .form-grid div {
     display: flex;
     flex-direction: column;
@@ -52,7 +48,7 @@ h1 {
 label {
     font-weight: bold;
     margin-bottom: 6px;
-    color: #000000;
+    color: #00014b;
     
 }
 
@@ -70,7 +66,6 @@ input:focus {
     outline: none;
 }
 
-/* Botones */
 .form-a {
     display: flex;
     justify-content: center;
@@ -89,7 +84,6 @@ button {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* Botón enviar */
 .enviar-btn {
     background: linear-gradient(135deg,  #e6ff03, #91ff00, #ffee00);
     color: rgb(25, 0, 54);
@@ -101,7 +95,6 @@ button {
     transform: scale(1.05);
 }
 
-/* Botón reiniciar */
 .reset-btn {
     background: linear-gradient(135deg,  #10009cb4, #010027);
     color: #ffffff;
@@ -113,7 +106,6 @@ button {
     transform: scale(1.05);
 }
 
-/*diseño responsive ojo*/
 @media (max-width: 600px) {
     .form-grid {
         grid-template-columns: 1fr;
@@ -128,7 +120,6 @@ button {
     }
 }
 
-/* Botón de volver */
 .btn-volver {
     display: inline-flex;
     align-items: center;
@@ -138,6 +129,7 @@ button {
     border: none;
     color: #000261;
     cursor: pointer;
+    padding: 10px 4px;
     margin-bottom: 0px;
     transition: color 0.3s, transform 0.2s;
 }

@@ -1,16 +1,13 @@
 <div class="principal">
-  <div class="form">
-    <!-- Botón de retroceso -->
-    <!-- Con ícono SVG de flecha -->
+  <div class="form">    
     <div style="text-align: left;">
       <button class="btn-volver" (click)="volver()">
-        <span style="font-size: 20px;">⬅</span>
+        <span style="font-size: 18px; color: rgb(0, 0, 83);">⮜ Atrás</span>
       </button>
     </div>
     <h1>Formulario de Registro</h1>
     <form (ngSubmit)="enviarFormulario()">
-      <div class="form-grid">
-        <!-- ID -->
+      <div class="form-grid">       
         <div>
           <label for="id">ID</label>
           <input
@@ -30,9 +27,11 @@
           <div *ngIf="showErrors && idDuplicado" style="color:red;">
             ID no válido: ya existe un producto con ese ID.
           </div>
+          <div *ngIf="showErrors && !validarId(product.id)" style="color:red;">
+            Solo letras y números permitidos. No se permiten espacios ni caracteres especiales.
+          </div>
         </div>
-
-        <!-- Nombre -->
+        
         <div>
           <label for="nombre">Nombre</label>
           <input
@@ -49,9 +48,11 @@
           <div *ngIf="showErrors && (product.nombre.length < 5 || product.nombre.length > 100)" style="color:red;">
             Nombre debe tener entre 5 y 100 caracteres.
           </div>
+          <div *ngIf="showErrors && !validarNombre(product.nombre)" style="color:red;">
+            Solo letras permitidas.
+          </div>
         </div>
-
-        <!-- Descripción -->
+        
         <div>
           <label for="description">Descripción</label>
           <input
@@ -68,9 +69,11 @@
           <div *ngIf="showErrors && (product.description.length < 10 || product.description.length > 200)" style="color:red;">
             Descripción debe tener entre 10 y 200 caracteres.
           </div>
+          <div *ngIf="showErrors && !validarDescripcion(product.description)" style="color:red;">
+            Solo letras y números permitidos.
+          </div>
         </div>
-
-        <!-- Logo -->
+       
         <div>
           <label for="logo">Logo (URL)</label>
           <input
@@ -85,9 +88,11 @@
           <div *ngIf="showErrors && !product.logo" style="color:red;">
             Campo requerido
           </div>
+          <div *ngIf="showErrors && !logoValido" style="color:red;">
+            Ingrese una URL válida fomrato obligatorio (jpg, png, jpeg, svg)
+          </div>
         </div>
-
-        <!-- Fecha de Liberación -->
+        
         <div>
           <label for="fechaLib">Fecha Liberación</label>
           <input
@@ -97,26 +102,26 @@
             required
             [(ngModel)]="product.fechaLib"
             [ngModelOptions]="{ standalone: true }"
+            (input)="onFechaLiberacionChange($event)"
+            (change)="onFechaLiberacionChange($event)"
           />
           <div *ngIf="showErrors && !fechaLiberacionValida" style="color:red;">
             La fecha de liberación no puede ser anterior a hoy.
           </div>
         </div>
-
-        <!-- Fecha de Revisión -->
+       
         <div>
-          <label for="fechaRev">Fecha Revisión</label>
+          <label for="fechaRev">Fecha Revisión (Automática)</label>
           <input
             type="date"
             id="fechaRev"
             name="fechaRev"
             required
-            [(ngModel)]="product.fechaRev"
-            [ngModelOptions]="{ standalone: true }"
+            readonly
+            [value]="fechaRevisionFormateada"
+            style="background-color: #f5f5f5; cursor: not-allowed;"
           />
-          <div *ngIf="showErrors && !fechaRevisionValida" style="color:red;">
-            La fecha de revisión debe ser exactamente 1 año después de la liberación.
-          </div>
+          <div style="color: #666; font-size: 12px; margin-top: 4px;"></div>
         </div>
       </div>
       <br />

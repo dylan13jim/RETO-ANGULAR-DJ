@@ -2,27 +2,51 @@
   "products": [
     {
       "id": "a004",
+      "nombre": "VISA PREMIUM",
+      "description": "vias premium hola",
+      "logo": "https://cdn-icons-png.flaticon.com/256/3690/3690940.png",
+      "fechaLib": "2025-05-30",
+      "fechaRev": "2026-05-30T00:00:00.000Z"
+    },
+    {
+      "id": "a002",
+      "nombre": "VISA PREMIUM",
+      "description": "vias premium",
+      "logo": "https://www.acefcu.org/images/visaplatinum.jpg",
+      "fechaLib": "2025-05-31",
+      "fechaRev": "2026-05-31T00:00:00.000Z"
+    },
+    {
+      "id": "a003",
+      "nombre": "Tarjeta transaccional",
+      "description": "Cuenta transaccional para nuevo usuario",
+      "logo": "https://deuna.app/assets/images/icon-deuna.png",
+      "fechaLib": "2025-05-31",
+      "fechaRev": "2026-05-31T00:00:00.000Z"
+    },
+    {
+      "id": "a005",
       "nombre": "Tarjeta de debito",
-      "description": "remitida por parte del banco ubicacacion av 12 de octubre y jose tamayo hola",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxR7kSSPfbOlxDjFG3EQB47a9tVYiylMhhgA&s",
-      "fechaLib": "2025-05-09",
-      "fechaRev": "2026-05-09"
+      "description": "Tarjeta de debito banco pichicnha",
+      "logo": "https://deuna.app/assets/images/icon-deuna.png",
+      "fechaLib": "2025-06-01",
+      "fechaRev": "2026-06-01T00:00:00.000Z"
     },
     {
       "id": "a006",
-      "nombre": "Visa Platinum",
-      "description": "remitida por parte del banco ubicacacion av 12 de octubre y jose tamayo",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxR7kSSPfbOlxDjFG3EQB47a9tVYiylMhhgA&s",
-      "fechaLib": "2025-05-09",
-      "fechaRev": "2026-05-09"
+      "nombre": "Tarjeta en linea ricardo",
+      "description": "Cuenta online tarjeta de debito",
+      "logo": "http://deuna.app/assets/images/icon-deuna.png",
+      "fechaLib": "2025-06-02",
+      "fechaRev": "2026-06-02T00:00:00.000Z"
     },
     {
-      "id": "a001",
-      "nombre": "Visa Platinum",
-      "description": "Visa Banco Pichicnha",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxR7kSSPfbOlxDjFG3EQB47a9tVYiylMhhgA&s",
-      "fechaLib": "2025-05-09",
-      "fechaRev": "2026-05-09"
+      "id": "a007",
+      "nombre": "Retiro sin tarjeta",
+      "description": "Se retiro al rededor de 20 dolares",
+      "logo": "https://deuna.app/assets/images/icon-deuna.png",
+      "fechaLib": "2025-06-02",
+      "fechaRev": "2026-06-02T00:00:00.000Z"
     }
   ]
 }
