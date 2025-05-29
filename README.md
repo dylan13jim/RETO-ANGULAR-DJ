@@ -56,10 +56,10 @@ Pantalla de agregar
 --
 ![image](https://github.com/user-attachments/assets/b48a61f4-99e2-400f-9eb4-8f02496f201e)
 
---
+
 Valdaciones realizadas
 --
--
+
 Campos vacios
 -
 ![image](https://github.com/user-attachments/assets/6765149d-9d0b-4357-a883-616802e3d37f)
