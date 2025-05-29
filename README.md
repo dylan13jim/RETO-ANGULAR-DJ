@@ -1,9 +1,9 @@
 ---
-# PROYECTO ANGULAR
-![image](https://github.com/user-attachments/assets/c1d11d24-0ce6-4663-96b0-5575e5df5287)
+PROYECTO ANGULAR
 ---
-# BACK -JSON-SERVER
-
+-
+BACK -JSON-SERVER
+-
 Instalacion json-server
 ``` bash
 npm i -g json-server
@@ -46,12 +46,34 @@ PRUEBAS DE ENDPOINTS
 ---
 PRUEBAS DE INTERFAZ UI
 ---
-![image](https://github.com/user-attachments/assets/36bac1ef-dc98-42ff-8798-f20d68533a73)
+--
+Pantalla inicial
+--
+![image](https://github.com/user-attachments/assets/55160a3a-0a84-4dab-a2bd-d8a238b3f0d2)
 
-![image](https://github.com/user-attachments/assets/2f220d7a-bc9e-4aa6-88df-5f1805db8990)
+--
+Pantalla de agregar
+--
+![image](https://github.com/user-attachments/assets/b48a61f4-99e2-400f-9eb4-8f02496f201e)
 
-![image](https://github.com/user-attachments/assets/15e1cddc-49f9-4631-8363-2e56657f6e39)
+--
+Valdaciones realizadas
+--
+-
+Campos vacios
+-
+![image](https://github.com/user-attachments/assets/6765149d-9d0b-4357-a883-616802e3d37f)
+-
+En el ID se ha validado las siguientes opciones:
+1. Que unicamente pueda ingresar datos numericos o letras, se restringio caracteres especiales y espaciado.
+-
+![image](https://github.com/user-attachments/assets/a38f6321-e6f3-44b5-ad5b-19b950489af3)
 
-![image](https://github.com/user-attachments/assets/c2425252-898c-4768-a022-59caa165abfd)
+--
+Pantalla de edicion
+--
+![image](https://github.com/user-attachments/assets/6bfb224e-a032-4d67-bc75-5950fe2e3695)
 
-
+-
+Valdaciones realizadas
+-
