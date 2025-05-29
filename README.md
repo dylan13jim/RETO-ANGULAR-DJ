@@ -31,19 +31,19 @@ npm start
 ---
 PRUEBAS DE ENDPOINTS
 ---
-<br>
+
 *GET*
 ![image](https://github.com/user-attachments/assets/c6d7ee45-2a36-471c-8fab-a5ee628dd890)
-<br>
+
 *POST*
 ![image](https://github.com/user-attachments/assets/47289529-9ce0-4584-9937-803e7d0fc34c)
-<br>
+
 *PUT*
 ![image](https://github.com/user-attachments/assets/635e5259-c213-492d-b5a0-1f467ea33194)
-<br>
+
 *DELETE*
 ![image](https://github.com/user-attachments/assets/3c7acbc6-41c1-4c90-bb3e-476c39c5cb7d)
-<br>
+
 
 PRUEBAS DE INTERFAZ UI
 ---
@@ -60,37 +60,57 @@ Pantalla de agregar
 
 Valdaciones realizadas
 --
+</br>Validacion de los campos vacios:</br></br>
+![image](https://github.com/user-attachments/assets/f8b68dad-b562-4fc8-8337-6de3c0b54c83)
 
-Campos vacios
--
-![image](https://github.com/user-attachments/assets/6765149d-9d0b-4357-a883-616802e3d37f)
+</br>Validacion para el campo de ID:</br></br>
+2. Se valido que unicamente inrese datos numericos y letras, no puede ingresar simbolos ni dejar espacios.
+![image](https://github.com/user-attachments/assets/a66f832b-f351-4e98-a37d-e33643ada7a8)
 
-<br>
-<br>
-En el ID se ha validado las siguientes opciones:
-<br>
-1. Que unicamente pueda ingresar datos numericos o letras, se restringio caracteres especiales y espaciado.
-<br>
-![image](https://github.com/user-attachments/assets/a38f6321-e6f3-44b5-ad5b-19b950489af3)
-<br>
-2. Si ingreso un id que ya existe.
-<br>
-![image](https://github.com/user-attachments/assets/914b048f-426d-477d-aaff-15918a1d3abc)
-<br>
+</br>3. Validacion de ID unico.</br></br>
+![image](https://github.com/user-attachments/assets/5e0e95e0-47ab-44d7-a7f8-28cdea886a4c)
 
 
-<br>
-<br>
-En apartado de nombre se realizo las siguientes validaciones:
-<br>
-1. Que unicamente pueda caracteres, letras, en caso de ingresar numeros o caracteres especiales no dejara enviar formulario .
-<br>
-![image](https://github.com/user-attachments/assets/fcf81372-a6c0-4c88-8312-2d4b50723213)
+</br>En apartado de nombre se realizo las siguientes validaciones:</br></br>
+
+1. Que unicamente pueda caracteres, letras, en caso de ingresar numeros o caracteres especiales no dejara enviar formulario.</br></br>
+![image](https://github.com/user-attachments/assets/896f1769-6486-4557-a094-0335b4b02803)
+
+</br>En apartado de descripcion se realizo las siguientes validaciones:</br></br>
+
+1. Que unicamente pueda caracteres y numeros, si puede tener espacios pero no ingresar simbolos.</br></br>
+![image](https://github.com/user-attachments/assets/af68593a-6303-4b3a-807d-a30744f15229)
+
+</br>En apartado de URL se realizo las siguientes validaciones:</br></br>
+
+1. En cao de ingresar una URL que no existe el sistem me mostrara que la url no existe.</br></br>
+![image](https://github.com/user-attachments/assets/510d03d5-0925-431d-aaca-6d739ab6c3d4)
+
+</br>En apartado de FECHA se realizo las siguientes validaciones:</br></br>
+
+1. Si ingresa una fecha posterior a la actual, me mostarar el sistema que solo puede ingresar una fecha igual a hoy o despues a la indicada.</br></br>
+![image](https://github.com/user-attachments/assets/b2a45b3f-1a56-4ce2-9d65-af7b326e29a9)
+
+</br>2. La fecha de revision se generara de manera automatica despues de un año de la fecha de liberación.</br></br>
+![image](https://github.com/user-attachments/assets/db834384-9b8c-4e18-a9fc-6f83d64538ad)
+
+
 
 Pantalla de edicion
 --
 ![image](https://github.com/user-attachments/assets/6bfb224e-a032-4d67-bc75-5950fe2e3695)
-<br>
 
-Valdaciones realizadas
+
+</br></br>Valdaciones realizadas</br>
 -
+En este co se aplica las mismas validaciones aplicadas en registro de formulario con la diferencia de que el ID va a ser un campo estatico el cual no se podra modificar.
+![image](https://github.com/user-attachments/assets/86c31932-c8d1-4902-b2b0-b5202fff52b4)
+
+
+</br></br>FUNCIONALIDADES IMPLEMENTADAS A LA VERSION ANTERIOR</br>
+--
+
+Actualizacion del diseño, impementacion de menu deplegabl para las opciones de editar y elimiar, y elaboración de paginación, ademas de incluir y mejorar validaciones anteriormente realizadas</br>
+![image](https://github.com/user-attachments/assets/7ccedff7-cc45-462f-8e0e-c0830d242c7d)
+
+
