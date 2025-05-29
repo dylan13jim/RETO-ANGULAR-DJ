@@ -18,7 +18,7 @@ Puerto en el que est trabajando = 3000
 json-server --watch db.json --port 3000
 ```
 ---
-#FRONT ANGULAR
+FRONT ANGULAR
 ---
 Instalación de dependencias del proyecto
 ``` bash
@@ -58,7 +58,7 @@ Pantalla de agregar
 ![image](https://github.com/user-attachments/assets/b48a61f4-99e2-400f-9eb4-8f02496f201e)
 
 
-Valdaciones realizadas
+Validaciones realizadas
 --
 </br>Validacion de los campos vacios:</br></br>
 ![image](https://github.com/user-attachments/assets/f8b68dad-b562-4fc8-8337-6de3c0b54c83)
@@ -101,16 +101,16 @@ Pantalla de edicion
 ![image](https://github.com/user-attachments/assets/6bfb224e-a032-4d67-bc75-5950fe2e3695)
 
 
-</br></br>Valdaciones realizadas</br>
+</br></br>Validaciones realizadas</br>
 -
-En este co se aplica las mismas validaciones aplicadas en registro de formulario con la diferencia de que el ID va a ser un campo estatico el cual no se podra modificar.
+En este formulario de edición se realizo las mismas validaciones aplicadas en registro de formulario, con la diferencia de que el ID va a ser un campo estatico el cual no se podra modificar.</br>
 ![image](https://github.com/user-attachments/assets/86c31932-c8d1-4902-b2b0-b5202fff52b4)
 
 
 </br></br>FUNCIONALIDADES IMPLEMENTADAS A LA VERSION ANTERIOR</br>
 --
 
-Actualizacion del diseño, impementacion de menu deplegabl para las opciones de editar y elimiar, y elaboración de paginación, ademas de incluir y mejorar validaciones anteriormente realizadas</br>
+Actualizacion del diseño, implementacion de menu deplegable para las opciones de editar y elimiar, elaboración de paginación, ademas de incluir y mejorar validaciones anteriormente realizadas</br>
 ![image](https://github.com/user-attachments/assets/7ccedff7-cc45-462f-8e0e-c0830d242c7d)
 
 
