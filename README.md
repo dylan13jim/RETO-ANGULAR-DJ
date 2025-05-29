@@ -66,7 +66,7 @@ Campos vacios
 -
 En el ID se ha validado las siguientes opciones:
 1. Que unicamente pueda ingresar datos numericos o letras, se restringio caracteres especiales y espaciado.
--
+
 ![image](https://github.com/user-attachments/assets/a38f6321-e6f3-44b5-ad5b-19b950489af3)
 
 --
